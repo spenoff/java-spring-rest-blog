@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 public class Author {
     public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
     @Id
+    @Version private Long version;
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String firstname;

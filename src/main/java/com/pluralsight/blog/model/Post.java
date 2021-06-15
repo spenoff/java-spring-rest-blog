@@ -15,6 +15,7 @@ import java.util.List;
 @Entity
 public class Post {
     @Id
+    @Version private Long version;
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
