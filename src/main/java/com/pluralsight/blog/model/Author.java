@@ -18,7 +18,9 @@ public class Author {
     private Long id;
     private String firstname;
     private String lastname;
+    @JsonIgnore
     private String username;
+    @JsonIgnore
     private String password;
 
     @OneToMany
@@ -61,7 +63,6 @@ public class Author {
         this.lastname = lastname;
     }
 
-    @JsonIgnore
     public String getUsername() {
         return username;
     }
@@ -70,12 +71,10 @@ public class Author {
         this.username = username;
     }
 
-    @JsonIgnore
     public String getPassword() {
         return password;
     }
 
-    @Override
     public boolean equals(Object obj) {
         Author inputAuthor = (Author)obj;
         if (!this.firstname.equals(inputAuthor.getFirstName())) {
